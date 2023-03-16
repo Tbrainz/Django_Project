@@ -896,6 +896,9 @@ form > a{
         padding:0 10px;
         display: block;
     }
+    .desc-text{
+        text-align: center;
+    }
 
     .desc-text > p{
         margin-bottom: 1rem;
@@ -958,6 +961,7 @@ form > a{
     
     .body1-btn{
         width:100%;
+        margin-top:5px;
         padding-left: 20px;
     }
 
