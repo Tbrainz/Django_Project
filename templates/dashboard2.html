@@ -1,0 +1,58 @@
+{% extends 'index.html' %}
+<!-- loading static -->
+{% load static %}
+<!-- css -->
+{% block styles %} <link rel="stylesheet" href="{% static 'css\dashboard.css' %}"> {% endblock %}
+
+
+<!---logo-->
+{% block logo %}
+<div class="logo-img">
+    <img src="../static/images/nasims-logo.webp" alt="">
+</div>
+ {% endblock %}
+
+ <!-- navlink -->
+ {% block navlink %}
+ 
+ {% endblock %}
+
+ <!-- profile -->
+ {% block profile %}
+ {% if request.user.is_authenticated %}
+    <div class="profile">
+        <div class="profile-dropdown">
+            <img src="../static/images/nasims-logo.webp" alt="">
+            <span>{{request.user}}</span>
+        </div>
+    </div>
+ {% else %}
+
+ {% endif %}
+ {% endblock %}
+ <!-- content -->
+ {% block content %}
+ {% endblock %}
+
+ {% block extrablock %}
+
+ <div>
+    <div>
+        <div class="pd">
+            <a href="">Edit</a>
+            <h2>Personal Details</h2>
+        </div>
+    </div>
+
+
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+ </div>
+ {% endblock %}
+ 

@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-NASIMS</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header class="LoginHeader">
+        <div class="LH-img">
+            <img src="../static/images/nasims-logo.webp" alt="">
+        </div>
+
+        <nav class="LH-nav">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">News</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main class="login-body">
+        <div class="login-body-con">
+            <div class="login-body-con-head">
+                <h2>Login to your NASIMS Account</h2>
+            </div>
+
+            <div class="login-body-con-text">
+                <p>For biometrics enrolment, kindly follow the instructions below; </p>
+                <ol>
+                    <li>Login to your dashboard and click the "verification" tab</li>
+                    <li>Click the “capture your fingerprint” button to download and install the enrolment application </li>
+                    <li>After installation, provide the required credentials and click "Proceed". </li>
+                    <li>Make sure the fingerprint biometric device is connected, then click on "Begin Enrolment" to launch the enrolment process.</li>
+                    <li>Click on the finger to begin the enrolment process </li>
+                    <li>Applicants are to enroll their Right thumb, Right index, Left thumb and Left index fingers only for successful enrolment </li>
+                    <li>After successful enrollment, click on “Submit” to save the biometric enrollment </li>
+
+                </ol>
+                <p>After successful enrolment, please check the
+                 "verification" tab of your self service portal to confirm if the capture was successful. </p>
+
+            </div>
+
+
+        </div>
+
+        <div class="error">
+            {{form.password.error}}
+        </div>
+        <div class="login-body-form">
+            <form method="POST">
+                    {% csrf_token %}
+                    {{form.username}}
+                    {{form.password}}
+    
+                    <input id="checkbox" type="checkbox" name="" id="">
+                    <label id="checkl" for="checkbox">Keep me logged in</label>
+                    <a href="/">Forget Password</a><br />
+                    <input id="btn" type="submit" value="Proceed"> 
+            </form>
+
+        </div>
+    </main>
+
+   
+                
+                 
+           
+
+   <div class="form2">
+    <form action="" method="POST">
+        <div>{{form.as_p}}</div>
+        <div><button type="submit">Login</button></div>
+    </form>
+   </div>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
